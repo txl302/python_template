@@ -1,13 +1,15 @@
-import thread
+import threading
 import time
 
 def function1(data):
-	print(data)
-	time.sleep(1)
+        while True:
+                print(data)
+                time.sleep(1)
 
 def function2(data):
-	print(data)
-	time.sleep(1)
+        while True:
+                print(data)
+                time.sleep(2)
 
 thread1 = threading.Thread(target = function1, args = (1,))
 thread2 = threading.Thread(target = function2, args = (2,))
